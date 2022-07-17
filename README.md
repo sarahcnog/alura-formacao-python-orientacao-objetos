@@ -1,4 +1,4 @@
-#Alura - Formação Python e orientação a objetos
+# Alura - Formação Python e orientação a objetos
 
 Nessa formação dei inicio a minha aprendizagem sobre o Python, uma linguagem extremamente versátil.
 
