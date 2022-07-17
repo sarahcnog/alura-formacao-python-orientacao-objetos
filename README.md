@@ -21,3 +21,7 @@ Foram 8 cursos em cerca de 85h de aprendizado. Link: https://cursos.alura.com.br
 * Projeto: Formatador de data
 * Projeto: Extrator URL
 * Projeto: Playlist de filmes
+
+### Notebooks de estudo:
+
+* Manipulação com colletions
