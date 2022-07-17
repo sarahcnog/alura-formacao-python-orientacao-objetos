@@ -1,26 +1,18 @@
-url = "https://bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&quantidade=100"
+#from cpf_cnpj import Documento
+#from validate_docbr import CNPJ
+#from TelefonesBr import TelefonesBr
+#from datetime import datetime, timedelta
+#from datas_br import DatasBr
 
-# Sanitização da URL
-url = url.strip()
+import requests
 
-# Validação da URL
-if url == "":
-    raise ValueError("A URL está vazia")
+from acesso_cep import BuscaEndereco
+cep = "25800320"
+objeto_cep = BuscaEndereco(cep)
 
-# Separa base e os parametros
-indice_interrogacao = url.find("?")
-url_base = url[:indice_interrogacao]
-url_parametros = url[indice_interrogacao+1:]
-print(url_parametros)
+#r = requests.get("https://viacep.com.br/ws/01001000/json/")
+#print(r.text)
 
-# Busca o valor de um parametro
-parametro_busca = 'moedaDestino'
-indice_parametro = url_parametros.find(parametro_busca)
-indice_valor = indice_parametro + len(parametro_busca) + 1
-indice_e_comercial = url_parametros.find('&', indice_valor)
-if indice_e_comercial == -1:
-    valor = url_parametros [indice_valor:]
-else:
-    valor = url_parametros[indice_valor: indice_e_comercial]
+bairro, cidade, uf = objeto_cep.acessa_via_cep()
 
-print(valor)
+print(bairro, cidade, uf)
